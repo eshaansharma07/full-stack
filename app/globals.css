@@ -131,8 +131,16 @@ select {
   margin-top: 28px;
 }
 
+.hero-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .action,
-.ghost-action {
+.ghost-action,
+.ghost-button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -152,6 +160,25 @@ select {
   border-color: var(--line-strong);
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
+}
+
+.ghost-button {
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.file-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .hero-side,

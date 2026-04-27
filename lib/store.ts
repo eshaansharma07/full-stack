@@ -32,7 +32,7 @@ export type StoreGoal = {
   accent: string;
 };
 
-type StoreShape = {
+export type StoreShape = {
   user: {
     id: string;
     name: string;

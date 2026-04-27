@@ -6,22 +6,23 @@ export async function getDashboardData() {
   const store = await readStore();
   const user = store.user;
   const budgets = [...store.budgets].sort((left, right) => right.spent - left.spent);
-  const transactions = [...store.transactions]
-    .sort((left, right) => +new Date(right.happenedAt) - +new Date(left.happenedAt))
-    .slice(0, 8);
+  const sortedTransactions = [...store.transactions].sort(
+    (left, right) => +new Date(right.happenedAt) - +new Date(left.happenedAt)
+  );
+  const transactions = sortedTransactions.slice(0, 8);
   const goals = [...store.goals].sort(
     (left, right) => +new Date(left.deadline) - +new Date(right.deadline)
   );
 
-  const expenses = transactions
+  const expenses = sortedTransactions
     .filter((transaction) => transaction.kind === "expense" && transaction.status !== "scheduled")
     .reduce((sum, transaction) => sum + transaction.amount, 0);
 
-  const income = transactions
+  const income = sortedTransactions
     .filter((transaction) => transaction.kind === "income")
     .reduce((sum, transaction) => sum + transaction.amount, 0);
 
-  const scheduled = transactions
+  const scheduled = sortedTransactions
     .filter((transaction) => transaction.status === "scheduled")
     .reduce((sum, transaction) => sum + transaction.amount, 0);
 
@@ -31,6 +32,7 @@ export async function getDashboardData() {
 
   return {
     user: {
+      id: user.id,
       name: user.name,
       email: user.email,
       monthlyIncome: user.monthlyIncome

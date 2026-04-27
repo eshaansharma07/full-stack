@@ -1,0 +1,132 @@
+{
+  "user": {
+    "id": "user-main",
+    "name": "Aarav Patel",
+    "email": "aarav@budgetsense.ai",
+    "monthlyIncome": 142000
+  },
+  "budgets": [
+    {
+      "id": "budget-lifestyle",
+      "name": "Lifestyle Grid",
+      "category": "Lifestyle",
+      "limit": 32000,
+      "spent": 24850,
+      "accent": "#6ee7b7",
+      "trend": 14.2
+    },
+    {
+      "id": "budget-housing",
+      "name": "Home Orbit",
+      "category": "Housing",
+      "limit": 41000,
+      "spent": 36300,
+      "accent": "#fbbf24",
+      "trend": -2.4
+    },
+    {
+      "id": "budget-transport",
+      "name": "Mobility Pulse",
+      "category": "Transport",
+      "limit": 18000,
+      "spent": 12110,
+      "accent": "#38bdf8",
+      "trend": 5.9
+    },
+    {
+      "id": "budget-health",
+      "name": "Health Stack",
+      "category": "Health",
+      "limit": 12000,
+      "spent": 7900,
+      "accent": "#fb7185",
+      "trend": -7.8
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn-rent",
+      "label": "Rent autopay",
+      "notes": "April housing payment",
+      "amount": 28000,
+      "kind": "expense",
+      "category": "Housing",
+      "merchant": "Solis Residency",
+      "status": "processed",
+      "happenedAt": "2026-04-24T06:30:00.000Z"
+    },
+    {
+      "id": "txn-salary",
+      "label": "Salary credit",
+      "notes": "Monthly payroll",
+      "amount": 142000,
+      "kind": "income",
+      "category": "Income",
+      "merchant": "Orbit Labs",
+      "status": "processed",
+      "happenedAt": "2026-04-22T05:00:00.000Z"
+    },
+    {
+      "id": "txn-cafe",
+      "label": "Cafe meet",
+      "notes": "Product meetup",
+      "amount": 1450,
+      "kind": "expense",
+      "category": "Lifestyle",
+      "merchant": "Blue Tokai",
+      "status": "processed",
+      "happenedAt": "2026-04-26T14:30:00.000Z"
+    },
+    {
+      "id": "txn-sip",
+      "label": "Index fund SIP",
+      "notes": "Automated wealth transfer",
+      "amount": 12000,
+      "kind": "expense",
+      "category": "Investments",
+      "merchant": "Groww",
+      "status": "scheduled",
+      "happenedAt": "2026-04-29T04:00:00.000Z"
+    },
+    {
+      "id": "txn-gym",
+      "label": "Gym renewal",
+      "notes": "Quarterly plan",
+      "amount": 5200,
+      "kind": "expense",
+      "category": "Health",
+      "merchant": "Cult",
+      "status": "processed",
+      "happenedAt": "2026-04-19T08:20:00.000Z"
+    },
+    {
+      "id": "txn-ride",
+      "label": "Ride share",
+      "notes": "Late office return",
+      "amount": 620,
+      "kind": "expense",
+      "category": "Transport",
+      "merchant": "Uber",
+      "status": "processed",
+      "happenedAt": "2026-04-25T17:40:00.000Z"
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-tokyo",
+      "name": "Tokyo sprint",
+      "current": 126000,
+      "target": 240000,
+      "deadline": "2026-10-24T00:00:00.000Z",
+      "accent": "#38bdf8"
+    },
+    {
+      "id": "goal-reserve",
+      "name": "Emergency reserve",
+      "current": 318000,
+      "target": 500000,
+      "deadline": "2027-01-12T00:00:00.000Z",
+      "accent": "#f59e0b"
+    }
+  ]
+}
